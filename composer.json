@@ -1,0 +1,43 @@
+{
+  "name": "mckenziearts/laravel-socialite",
+  "description": "Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Arthur Monney",
+      "email": "monneylobe@gmail.com",
+      "homepage": "https://www.twitter.com/monneyarthur",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/mckenziearts/laravel-socialite",
+  "keywords": ["Laravel", "Laravel-socialite", "oauth"],
+  "require": {
+    "illuminate/support": "~5",
+    "laravel/socialite": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "orchestra/testbench": "~3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mckenziearts\\LaravelSocialite\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Mckenziearts\\LaravelSocialite\\Tests\\": "tests"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Mckenziearts\\LaravelSocialite\\LaravelSocialiteServiceProvider"
+      ],
+      "aliases": {
+        "LaravelSocialite": "Mckenziearts\\LaravelSocialite\\Facades\\LaravelSocialite"
+      }
+    }
+  }
+}

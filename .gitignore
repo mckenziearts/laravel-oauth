@@ -1,0 +1,9 @@
+/public/assets/node_modules
+.DS_Store
+composer.lock
+/vendor/
+/.idea
+/.vscode
+/.vagrant
+npm-debug.log
+yarn-error.log

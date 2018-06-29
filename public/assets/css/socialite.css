@@ -1,0 +1,185 @@
+.socialite-buttons {
+  margin: 10px 0;
+}
+
+.socialite-buttons .btn {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: .9rem;
+  line-height: 1.6;
+  border-radius: 2px;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.btn i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  font-size: 18px;
+}
+
+.btn-social {
+  padding-left: 35px;
+  color: #fff;
+}
+
+.btn-social:hover {
+  color: #fff;
+}
+
+.btn-facebook {
+  position: relative;
+  background: #47639e;
+}
+.btn-facebook:hover {
+  background: #35426b;
+}
+
+.btn-twitter {
+  position: relative;
+  background: #55acee;
+}
+.btn-twitter:hover {
+  background: #396d9a;
+}
+
+.btn-google {
+  position: relative;
+  background: #dd4b39;
+}
+.btn-google:hover {
+  background: #9c3427;
+}
+
+.btn-github {
+  position: relative;
+  background: #444;
+}
+.btn-github:hover {
+  background: #2b2b2b;
+}
+
+.btn-linkedin {
+  position: relative;
+  background: #0077B5;
+}
+.btn-linkedin:hover {
+  background: #00537b;
+}
+
+.btn-instagram {
+  position: relative;
+  background: #e4405f;
+}
+.btn-instagram:hover {
+  background: #b6314f;
+}
+
+.btn-dribbble {
+  position: relative;
+  background: #ea4c89;
+}
+.btn-dribbble:hover {
+  background: #9b3058;
+}
+
+.btn-behance {
+  position: relative;
+  background: #203d9c;
+}
+.btn-behance:hover {
+  background: #004585;
+}
+
+.btn-youtube {
+  position: relative;
+  background: #cd201f;
+}
+.btn-youtube:hover {
+  background: #8a1919;
+}
+
+.btn-dropbox {
+  position: relative;
+  background: #007ee5;
+}
+.btn-dropbox:hover {
+  background: #0059aa;
+}
+
+@font-face {
+  font-family: 'socialite';
+  src:  url('../fonts/socialite.eot?vuoe9i');
+  src:  url('../fonts/socialite.eot?vuoe9i#iefix') format('embedded-opentype'),
+  url('../fonts/socialite.ttf?vuoe9i') format('truetype'),
+  url('../fonts/socialite.woff?vuoe9i') format('woff'),
+  url('../fonts/socialite.svg?vuoe9i#socialite') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="social-"], [class*=" social-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'socialite' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.social-google:before {
+  content: "\ea88";
+}
+.social-google-plus:before {
+  content: "\ea8b";
+}
+.social-facebook:before {
+  content: "\ea90";
+}
+.social-instagram:before {
+  content: "\ea92";
+}
+.social-twitter:before {
+  content: "\ea96";
+}
+.social-youtube:before {
+  content: "\ea9d";
+}
+.social-dribbble:before {
+  content: "\eaa7";
+}
+.social-behance:before {
+  content: "\eaa8";
+}
+.social-dropbox:before {
+  content: "\eaae";
+}
+.social-github:before {
+  content: "\eab0";
+}
+.social-linkedin:before {
+  content: "\eaca";
+}
