@@ -7,7 +7,7 @@
 
 ## Introduction
 
-Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github. This package use [https://github.com/laravel/socialite](Laravel Socialite).
+Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github. This package use [Laravel Socialite](https://github.com/laravel/socialite).
 
 ## Installation
 
@@ -41,7 +41,7 @@ Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, L
 
 When you published the vendor assets you added a new file inside of your `config` folder which is called `config/laravel-socialite.php`. This file contains a bunch of configuration you can use to configure your connexion using social networks.
 
-First, you have to add your service like is defined on The official documentation of Socialite [https://laravel.com/docs/5.6/socialite#configuration](available here). Just setup your 
+First, you have to add your service like is defined on The official documentation of Socialite [available here](https://laravel.com/docs/5.6/socialite#configuration). Just setup your 
 Oauth services for your application. Laravel/socialite is automatically installed by this package.
   
 ## Usage
@@ -138,8 +138,8 @@ If you discover any security related issues, please email monneylobe@gmail.com i
 
 ## Credits
 
-- [Arthur Monney][https://www.twitter.com/monneyarthur]
-- [Laravel Socialite][https://laravel.com/docs/5.6/socialite]
+- [Arthur Monney](https://www.twitter.com/monneyarthur)
+- [Laravel Socialite](https://laravel.com/docs/5.6/socialite)
 
 ## License
 
