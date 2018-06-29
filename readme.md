@@ -118,6 +118,12 @@ php artisan vendor:publish --tag=laravelsocialite.migrations --force
   ```
 With this feature you can overwrite the present methods on the trait if you want to customize them even more
 
+8. Add this routes to your default web route file
+  ```php
+  Route::get('/auth/{provider}', 'Auth\LoginController@redirectToProvider');
+  Route::get('/callback/{provider}', 'Auth\LoginController@handleProviderCallback');
+  ```
+
 ## Change log
 
 Please see the [changelog.md](changelog.md) for more information on what has changed recently.
