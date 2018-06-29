@@ -1,4 +1,4 @@
-# Laravel Socialite
+<p align="center"><img src="https://pix.watch/KMqGF4/v0Yo15.png"></p>
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -7,13 +7,13 @@
 
 ## Introduction
 
-:octocat: Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github. This package use [https://github.com/laravel/socialite](Laravel Socialite).
+Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github. This package use [https://github.com/laravel/socialite](Laravel Socialite).
 
 ## Installation
 
 1. Include the package in your project using Composer
 
-  ``` bash
+  ``` shell
   $ composer require mckenziearts/laravel-socialite
   ```
 
@@ -27,23 +27,100 @@
     
 3. Publish the Vendor Assets files by running:
 
-  ```bash
+  ```shell
   php artisan vendor:publish --provider="Mckenziearts\LaravelSocialite\LaravelSocialiteServiceProvider"
   ```
 
 4. Now that we have published a few new files to our application we need to reload them with the following command:
 
-  ```bash
+  ```shell
   composer dump-autoload
   ```
   
+## Configuration
+
+When you published the vendor assets you added a new file inside of your `config` folder which is called `config/laravel-socialite.php`. This file contains a bunch of configuration you can use to configure your connexion using social networks.
+
+First, you have to add your service like is defined on The official documentation of Socialite [https://laravel.com/docs/5.6/socialite#configuration](available here). Just setup your 
+Oauth services for your application. Laravel/socialite is automatically installed by this package.
   
 ## Usage
 
+1. Fisrt of all in the `config/laravel-socialite.php` file you must define the default users table name to simplify migrations. By default users table is used
+  
+  ```php
+  'users' => [
+      'table'   => 'users',
+  ],
+  ```
+  
+2. Secondly you must specify the providers to use for social login in the `providers` array. To active a provider set the value to `true`
+
+  ```php
+    'providers' => [
+      'facebook'  => true,
+      'google'    => true,
+      'github'    => true,
+    ],
+  ```
+  
+The last configuration is to stylize the button by editing class name and add or remove icon
+
+![](https://pix.watch/m3qMiw/Q8fKIi.png)
+
+Next, if you may want to re-publish the laravel-socialite assets, config, and the migrations run the following command:
+
+```
+php artisan vendor:publish --tag=laravelsocialite.assets --force
+php artisan vendor:publish --tag=laravelsocialite.config --force
+php artisan vendor:publish --tag=laravelsocialite.migrations --force
+```
+
+3. Next to make sure you have the latest database schema run:
+
+  ```
+  php artisan migrate
+  ```
+
+4. Inside of your master.blade.php file include a header yield. Inside the head of your master or app.blade.php add the following:
+
+  ```
+  @yield('css')
+  ```
+
+5. Add the blade directive to your view where you want to display the socials buttons. The directive takes a parameter `login` to display the login text or `resgister` for the text related to the registration
+
+  ```
+  @socialite('login')
+  ```
+
+6. Add the style of the buttons by adding this to your view in the section in the `@yield('css')` who defined in your master layout
+
+```
+@section('css')
+    <link href="{{ url('/vendor/mckenziearts/laravelsocialite/assets/css/socialite.css') }}" rel="stylesheet">
+@endsection
+```
+
+7. In the `Auth\LoginController` of your application, add the `OAuthSocialite` trait:
+
+  ```php
+  namespace App\Http\Controllers\Auth;
+  
+  use App\Http\Controllers\Controller;
+  use Illuminate\Foundation\Auth\AuthenticatesUsers;
+  use Mckenziearts\LaravelSocialite\Traits\OAuthSocialite;
+  
+  class LoginController extends Controller
+  {
+      use OAuthSocialite;
+      ..
+  ```
+With this feature you can overwrite the present methods on the trait if you want to customize them even more
 
 ## Change log
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
+Please see the [changelog.md](changelog.md) for more information on what has changed recently.
 
 ## Testing
 
@@ -61,12 +138,12 @@ If you discover any security related issues, please email monneylobe@gmail.com i
 
 ## Credits
 
-- [Arthur Monney][link-author]
-- [All Contributors][link-contributors]
+- [Arthur Monney][https://www.twitter.com/monneyarthur]
+- [Laravel Socialite][https://laravel.com/docs/5.6/socialite]
 
 ## License
 
-MIT. Please see the [license file](license.md) for more information.
+MIT. Please see the [license.md](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/mckenziearts/laravel-socialite.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/mckenziearts/laravel-socialite.svg?style=flat-square
