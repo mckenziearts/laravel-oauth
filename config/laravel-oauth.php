@@ -42,24 +42,29 @@ return [
     | Socialite buttons default style.
     | To use your own css classes, you can modify the following classes
     | and replace with yours. By default Boostrap buttons class are used
+    | if you want to use outline buttons (which add 'btn-outline-provider' class)
+    | you have to pass to outline index on buttons array to true
     |
     |
     | example:
     | 'buttons' => [
-    |     'class' => 'btn btn-social'
-    |     'icon'  => false
+    |     'class'    => 'btn btn-social'
+    |     'icon'     => false,
+    |     'outline'  => false,
     |  ]
     |
     | 'buttons' => [
-    |     'class' => 'btn btn-social btn-block'
-    |     'icon'  => true
+    |     'class'    => 'btn btn-social btn-block'
+    |     'icon'     => true,
+    |     'outline'  => false,
     |  ]
     |
     */
 
     'buttons' => [
-        'class' => 'btn btn-social',
-        'icon'  => true,
+        'class'     => 'btn btn-social',
+        'icon'      => true,
+        'outline'   => false,
     ],
 
 ];
