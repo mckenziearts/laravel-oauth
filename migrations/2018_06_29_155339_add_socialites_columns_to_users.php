@@ -16,7 +16,7 @@ class AddSocialitesColumnsToUsers extends Migration
         Schema::table(config('laravel-socialite.users.table'), function (Blueprint $table) {
             foreach (config('laravel-socialite.providers') as $provider => $status) {
                 if ($status === true) {
-                    $table->string($provider .'_id')->nullable();
+                    $table->string($provider.'_id')->nullable();
                 }
             }
         });
@@ -31,8 +31,9 @@ class AddSocialitesColumnsToUsers extends Migration
     {
         Schema::table(config('laravel-socialite.users.table'), function (Blueprint $table) {
             foreach (config('laravel-socialite.providers') as $provider => $status) {
-                if (Schema::hasColumn(config('laravel-socialite.users.table'), $provider.'_id'))
-                $table->dropColumn($provider.'_id');
+                if (Schema::hasColumn(config('laravel-socialite.users.table'), $provider.'_id')) {
+                    $table->dropColumn($provider.'_id');
+                }
             }
         });
     }

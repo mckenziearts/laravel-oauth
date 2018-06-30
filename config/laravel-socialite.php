@@ -58,7 +58,7 @@ return [
 
     'buttons' => [
         'class' => 'btn btn-social',
-        'icon'  => true
+        'icon'  => true,
     ],
 
 ];
