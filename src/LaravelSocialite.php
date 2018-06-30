@@ -18,7 +18,6 @@ class LaravelSocialite
 
         foreach ($providers as $provider => $status) {
             if ($status === true) {
-
                 if (config('laravel-oauth.buttons.outline') === true) {
                     $buttons .= '<a href="'.url("/auth/$provider").'" class="'.config('laravel-oauth.buttons.class').' btn-outline-'.$provider.'">';
                 } else {
