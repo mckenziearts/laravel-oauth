@@ -158,7 +158,7 @@ MIT. Please see the [license.md](license.md) for more information.
 
 [link-packagist]: https://packagist.org/packages/mckenziearts/laravel-socialite
 [link-downloads]: https://packagist.org/packages/mckenziearts/laravel-socialite
-[link-travis]: https://travis-ci.org/mckenziearts/laravel-socialite
-[link-styleci]: https://styleci.io/repos/12345678
+[link-travis]: https://travis-ci.org/Mckenziearts/laravel-socialite
+[link-styleci]: https://styleci.io/repos/139203549
 [link-author]: https://github.com/mckenziearts
 [link-contributors]: ../../contributors]
