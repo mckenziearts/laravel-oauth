@@ -45,7 +45,7 @@ class LaravelSocialiteServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-socialite.php', 'laravel-socialite');
 
-        /**
+        /*
          * Register the Laravel/socialite service provider
          */
         $this->app->register(\Laravel\Socialite\SocialiteServiceProvider::class);

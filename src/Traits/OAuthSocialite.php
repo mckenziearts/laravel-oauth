@@ -2,10 +2,10 @@
 
 namespace Mckenziearts\LaravelSocialite\Traits;
 
-use Carbon\Carbon;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Socialite;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 trait OAuthSocialite
 {
@@ -60,7 +60,7 @@ trait OAuthSocialite
     }
 
     /**
-     * Resgiter user to the database and return ID
+     * Resgiter user to the database and return ID.
      *
      * @param $provider
      * @param $user
@@ -72,7 +72,7 @@ trait OAuthSocialite
             'name'  => $user->getName(),
             'email' => $user->getEmail(),
             'password'  => bcrypt('password'),
-            $provider. '_id'    => $user->getId(),
+            $provider.'_id'    => $user->getId(),
             'created_at'    => Carbon::now(),
             'updated_at'    => Carbon::now(),
         ]);
