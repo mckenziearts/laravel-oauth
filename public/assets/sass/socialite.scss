@@ -1,128 +1,30 @@
-$white: #fff;
+@import "custom";
+// Bootstrap required style
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+// Bootstrap buttons
+@import "~bootstrap/scss/buttons";
 
 .socialite-buttons {
   margin: 10px 0;
 
-  .btn {
-    margin-right: 10px;
-    margin-bottom: 15px;
+  .btn-social {
+    position: relative;
+    padding-left: 35px;
+    margin: 15px 10px;
+
+    [class^="social-"], [class*=" social-"] {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 7px;
+      position: absolute;
+      height: inherit;
+      left: 6px;
+      top: 8px;
+      font-size: 18px;
+    }
   }
-}
-
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: .9rem;
-  line-height: 1.6;
-  border-radius: 2px;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
-
-  i {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 7px;
-    position: absolute;
-    left: 6px;
-    top: 8px;
-    font-size: 18px;
-  }
-}
-
-.btn-social {
-  padding-left: 35px;
-  color: $white;
-  &:hover {
-    color: $white;
-  }
-}
-
-.btn-facebook {
-  position: relative;
-  background: #47639e;
-}
-.btn-facebook:hover {
-  background: #35426b;
-}
-
-.btn-twitter {
-  position: relative;
-  background: #55acee;
-}
-.btn-twitter:hover {
-  background: #396d9a;
-}
-
-.btn-google {
-  position: relative;
-  background: #dd4b39;
-}
-.btn-google:hover {
-  background: #9c3427;
-}
-
-.btn-github {
-  position: relative;
-  background: #444;
-}
-.btn-github:hover {
-  background: #2b2b2b;
-}
-
-.btn-linkedin {
-  position: relative;
-  background: #0077B5;
-}
-.btn-linkedin:hover {
-  background: #00537b;
-}
-
-.btn-instagram {
-  position: relative;
-  background: #e4405f;
-}
-.btn-instagram:hover {
-  background: #b6314f;
-}
-
-.btn-dribbble {
-  position: relative;
-  background: #ea4c89;
-}
-.btn-dribbble:hover {
-  background: #9b3058;
-}
-
-.btn-behance {
-  position: relative;
-  background: #203d9c;
-}
-.btn-behance:hover {
-  background: #004585;
-}
-
-.btn-youtube {
-  position: relative;
-  background: #cd201f;
-}
-.btn-youtube:hover {
-  background: #8a1919;
-}
-
-.btn-dropbox {
-  position: relative;
-  background: #007ee5;
-}
-.btn-dropbox:hover {
-  background: #0059aa;
 }
 
 @font-face {
