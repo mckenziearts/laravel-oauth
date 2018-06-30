@@ -2,7 +2,8 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
+[![Build Status](https://scrutinizer-ci.com/g/Mckenziearts/laravel-socialite/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Mckenziearts/laravel-socialite/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Mckenziearts/laravel-socialite/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mckenziearts/laravel-socialite/?branch=master)
 [![StyleCI][ico-styleci]][link-styleci]
 
 ## Introduction
@@ -154,7 +155,7 @@ MIT. Please see the [license.md](license.md) for more information.
 [ico-version]: https://img.shields.io/packagist/v/mckenziearts/laravel-socialite.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/mckenziearts/laravel-socialite.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/mckenziearts/laravel-socialite/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
+[ico-styleci]: https://styleci.io/repos/139203549/shield
 
 [link-packagist]: https://packagist.org/packages/mckenziearts/laravel-socialite
 [link-downloads]: https://packagist.org/packages/mckenziearts/laravel-socialite
