@@ -1,6 +1,6 @@
 <?php
 
-namespace Mckenziearts\LaravelSocialite\Providers;
+namespace Mckenziearts\LaravelOAuth\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;

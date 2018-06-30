@@ -1,6 +1,6 @@
 <?php
 
-namespace Mckenziearts\LaravelSocialite\Traits;
+namespace Mckenziearts\LaravelOAuth\Traits;
 
 use Socialite;
 use Carbon\Carbon;
@@ -40,7 +40,7 @@ trait OAuthSocialite
             $this->redirectToProvider($provider);
         }
 
-        $user = DB::table(config('laravel-socialite.users.table'))
+        $user = DB::table(config('laravel-oauth.users.table'))
             ->where($provider.'_id', '=', $providerUser->getId())
             ->orWhere('email', '=', $providerUser->getEmail())
             ->first();
@@ -68,7 +68,7 @@ trait OAuthSocialite
      */
     public function registerUser($provider, $user)
     {
-        $userId = DB::table(config('laravel-socialite.users.table'))->insertGetId([
+        $userId = DB::table(config('laravel-oauth.users.table'))->insertGetId([
             'name'  => $user->getName(),
             'email' => $user->getEmail(),
             'password'  => bcrypt('password'),

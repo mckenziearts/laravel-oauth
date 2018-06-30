@@ -1,6 +1,6 @@
 <?php
 
-namespace Mckenziearts\LaravelSocialite;
+namespace Mckenziearts\LaravelOAuth;
 
 class LaravelSocialite
 {
@@ -13,18 +13,19 @@ class LaravelSocialite
      */
     public function socialiteButtons(string $type)
     {
-        $providers = config('laravel-socialite.providers');
+        $providers = config('laravel-oauth.providers');
         $buttons = '<p class="socialite-buttons">';
 
         foreach ($providers as $provider => $status) {
             if ($status === true) {
-                $buttons .= '<a href="'.url("/auth/$provider").'" class="'.config('laravel-socialite.buttons.class').' btn-'.$provider.'">';
 
-                if (config('laravel-socialite.buttons.icon') === true) {
+                $buttons .= '<a href="'.url("/auth/$provider").'" class="'.config('laravel-oauth.buttons.class').' btn-'.$provider.'">';
+
+                if (config('laravel-oauth.buttons.icon') === true) {
                     $buttons .= "<i class='social-{$provider}'></i>";
                 }
 
-                $buttons .= trans("laravelsocialite::word.{$type}", ['provider' => $provider]);
+                $buttons .= trans("laravel-oauth::word.{$type}", ['provider' => $provider]);
                 $buttons .= '</a>';
             }
         }

@@ -29,6 +29,7 @@ return [
         'facebook'  => true,
         'google'    => true,
         'github'    => true,
+
         //'twitter'   => true,
         //'linkedin'  => true,
     ],

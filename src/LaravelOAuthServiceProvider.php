@@ -1,10 +1,10 @@
 <?php
 
-namespace Mckenziearts\LaravelSocialite;
+namespace Mckenziearts\LaravelOAuth;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelSocialiteServiceProvider extends ServiceProvider
+class LaravelOAuthServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -13,27 +13,27 @@ class LaravelSocialiteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadTranslationsFrom(__DIR__.'/Lang', 'laravelsocialite');
+        $this->loadTranslationsFrom(__DIR__.'/Lang', 'laravel-oauth');
 
         // Publishing assets.
         $this->publishes([
-            __DIR__.'/../public/assets' => public_path('vendor/mckenziearts/laravelsocialite/assets'),
-        ], 'laravelsocialite.assets');
+            __DIR__.'/../public/assets' => public_path('vendor/mckenziearts/laravel-oauth/assets'),
+        ], 'laravel-oauth.assets');
 
         // Publishing the migrations.
         $this->publishes([
             __DIR__.'/../migrations/' => database_path('migrations'),
-        ], 'laravelsocialite.migrations');
+        ], 'laravel-oauth.migrations');
 
         // Publishing the configuration file.
         $this->publishes([
-            __DIR__.'/../config/laravel-socialite.php' => config_path('laravel-socialite.php'),
-        ], 'laravelsocialite.config');
+            __DIR__.'/../config/laravel-oauth.php' => config_path('laravel-oauth.php'),
+        ], 'laravel-oauth.config');
 
         // Publishing the translation files.
         $this->publishes([
             __DIR__.'/Lang' => resource_path('lang/vendor/mckenziearts'),
-        ], 'laravelsocialite.views');
+        ], 'laravel-oauth.views');
     }
 
     /**
@@ -43,7 +43,7 @@ class LaravelSocialiteServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/laravel-socialite.php', 'laravel-socialite');
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-oauth.php', 'laravel-oauth');
 
         /*
          * Register the Laravel/socialite service provider
@@ -51,7 +51,7 @@ class LaravelSocialiteServiceProvider extends ServiceProvider
         $this->app->register(\Laravel\Socialite\SocialiteServiceProvider::class);
 
         // Register custom blade directive
-        $this->app->register(\Mckenziearts\LaravelSocialite\Providers\BladeServiceProvider::class);
+        $this->app->register(\Mckenziearts\LaravelOAuth\Providers\BladeServiceProvider::class);
 
         /*
          * Create aliases for the dependency.
@@ -64,7 +64,7 @@ class LaravelSocialiteServiceProvider extends ServiceProvider
             return new LaravelSocialite;
         });
         // Create aliase for the package provider
-        $loader->alias('LaravelSocialite', \Mckenziearts\LaravelSocialite\Facades\LaravelSocialite::class);
+        $loader->alias('LaravelSocialite', \Mckenziearts\LaravelOAuth\Facades\LaravelSocialite::class);
     }
 
     /**

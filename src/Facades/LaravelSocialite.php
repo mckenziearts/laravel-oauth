@@ -1,6 +1,6 @@
 <?php
 
-namespace Mckenziearts\LaravelSocialite\Facades;
+namespace Mckenziearts\LaravelOAuth\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

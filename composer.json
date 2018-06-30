@@ -1,6 +1,8 @@
 {
-  "name": "mckenziearts/laravel-socialite",
+  "name": "mckenziearts/laravel-oauth",
+  "version": "1.0.1",
   "description": "Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github",
+  "type": "laravel-package",
   "license": "MIT",
   "authors": [
     {
@@ -10,7 +12,7 @@
       "role": "Developer"
     }
   ],
-  "homepage": "https://github.com/mckenziearts/laravel-socialite",
+  "homepage": "https://github.com/mckenziearts/laravel-oauth",
   "keywords": ["Laravel", "Laravel-socialite", "oauth"],
   "require": {
     "illuminate/support": "~5",
@@ -22,21 +24,21 @@
   },
   "autoload": {
     "psr-4": {
-      "Mckenziearts\\LaravelSocialite\\": "src/"
+      "Mckenziearts\\LaravelOAuth\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Mckenziearts\\LaravelSocialite\\Tests\\": "tests"
+      "Mckenziearts\\LaravelOAuth\\Tests\\": "tests"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Mckenziearts\\LaravelSocialite\\LaravelSocialiteServiceProvider"
+        "Mckenziearts\\LaravelOAuth\\LaravelOAuthServiceProvider"
       ],
       "aliases": {
-        "LaravelSocialite": "Mckenziearts\\LaravelSocialite\\Facades\\LaravelSocialite"
+        "LaravelSocialite": "Mckenziearts\\LaravelOAuth\\Facades\\LaravelSocialite"
       }
     }
   }
