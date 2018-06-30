@@ -1,4 +1,4 @@
-<p align="center"><img src="https://pix.watch/KMqGF4/v0Yo15.png"></p>
+<p align="center"><img src="https://pix.watch/eId5wn/1PuLWY.png"></p>
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
