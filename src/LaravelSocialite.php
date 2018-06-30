@@ -18,7 +18,7 @@ class LaravelSocialite
 
         foreach ($providers as $provider => $status) {
             if ($status === true) {
-                $buttons .= '<a href="'. url("/auth/$provider") .'" class="'. config('laravel-socialite.buttons.class') .' btn-'. $provider .'">';
+                $buttons .= '<a href="'.url("/auth/$provider").'" class="'.config('laravel-socialite.buttons.class').' btn-'.$provider.'">';
 
                 if (config('laravel-socialite.buttons.icon') === true) {
                     $buttons .= "<i class='social-{$provider}'></i>";
