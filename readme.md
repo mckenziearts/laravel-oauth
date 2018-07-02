@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github. This package use [Laravel Socialite](https://github.com/laravel/socialite).
+Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github, Bitbucket, Instagram. This package use [Laravel Socialite](https://github.com/laravel/socialite).
 
 ## Installation
 
