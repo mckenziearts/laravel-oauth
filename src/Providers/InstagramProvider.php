@@ -2,9 +2,9 @@
 
 namespace Mckenziearts\LaravelOAuth\Providers;
 
+use Laravel\Socialite\Two\User;
 use Laravel\Socialite\Two\AbstractProvider;
 use Laravel\Socialite\Two\ProviderInterface;
-use Laravel\Socialite\Two\User;
 
 class InstagramProvider extends AbstractProvider implements ProviderInterface
 {

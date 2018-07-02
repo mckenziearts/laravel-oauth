@@ -65,6 +65,7 @@ class LaravelOAuthServiceProvider extends ServiceProvider
     }
 
     /**
+     *
      * Add Instagram to Socialite
      */
     private function bootInstagramSocialite()
