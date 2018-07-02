@@ -22,17 +22,13 @@ return [
     |
     | Here you can specify the specific provider you need for your application
     | Supported: "facebook", "google", "github", "twitter", "linkedin", "bitbucket"
+    | "instagram"
     |
     */
 
     'providers' => [
         'facebook'  => true,
         'google'    => true,
-        'github'    => true,
-
-        //'twitter'   => true,
-        //'linkedin'  => true,
-        //'bitbucket' => true,
     ],
 
     /*

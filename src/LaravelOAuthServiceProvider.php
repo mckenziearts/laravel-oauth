@@ -3,6 +3,7 @@
 namespace Mckenziearts\LaravelOAuth;
 
 use Illuminate\Support\ServiceProvider;
+use Mckenziearts\LaravelOAuth\Providers\InstagramProvider;
 
 class LaravelOAuthServiceProvider extends ServiceProvider
 {
@@ -15,25 +16,21 @@ class LaravelOAuthServiceProvider extends ServiceProvider
     {
         $this->loadTranslationsFrom(__DIR__.'/Lang', 'laravel-oauth');
 
-        // Publishing assets.
         $this->publishes([
             __DIR__.'/../public/assets' => public_path('vendor/mckenziearts/laravel-oauth/assets'),
         ], 'laravel-oauth.assets');
-
-        // Publishing the migrations.
         $this->publishes([
             __DIR__.'/../migrations/' => database_path('migrations'),
         ], 'laravel-oauth.migrations');
-
-        // Publishing the configuration file.
         $this->publishes([
             __DIR__.'/../config/laravel-oauth.php' => config_path('laravel-oauth.php'),
         ], 'laravel-oauth.config');
-
-        // Publishing the translation files.
         $this->publishes([
             __DIR__.'/Lang' => resource_path('lang/vendor/mckenziearts'),
         ], 'laravel-oauth.views');
+
+        // Boot all new OAuth 2 Provider added to Socialite
+        $this->bootInstagramSocialite();
     }
 
     /**
@@ -65,6 +62,21 @@ class LaravelOAuthServiceProvider extends ServiceProvider
         });
         // Create aliase for the package provider
         $loader->alias('LaravelSocialite', \Mckenziearts\LaravelOAuth\Facades\LaravelSocialite::class);
+    }
+
+    /**
+     * Add Instagram to Socialite
+     */
+    private function bootInstagramSocialite()
+    {
+        $socialite = $this->app->make(\Laravel\Socialite\Contracts\Factory::class);
+        $socialite->extend(
+            'instagram',
+            function ($app) use ($socialite) {
+                $config = $app['config']['services.instagram'];
+                return $socialite->buildProvider(InstagramProvider::class, $config);
+            }
+        );
     }
 
     /**
