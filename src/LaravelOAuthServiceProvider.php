@@ -81,6 +81,7 @@ class LaravelOAuthServiceProvider extends ServiceProvider
             'instagram',
             function ($app) use ($socialite) {
                 $config = $app['config']['services.instagram'];
+
                 return $socialite->buildProvider(InstagramProvider::class, $config);
             }
         );
