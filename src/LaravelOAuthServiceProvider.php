@@ -65,9 +65,15 @@ class LaravelOAuthServiceProvider extends ServiceProvider
     }
 
     /**
+     * Get the services provided by the provider.
      *
-     * Add Instagram to Socialite
+     * @return array
      */
+    public function provides()
+    {
+        return ['laravelsocialite'];
+    }
+
     private function bootInstagramSocialite()
     {
         $socialite = $this->app->make(\Laravel\Socialite\Contracts\Factory::class);
@@ -78,15 +84,5 @@ class LaravelOAuthServiceProvider extends ServiceProvider
                 return $socialite->buildProvider(InstagramProvider::class, $config);
             }
         );
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['laravelsocialite'];
     }
 }
