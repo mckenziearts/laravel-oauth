@@ -8,7 +8,24 @@
 
 ## Introduction
 
-Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github, Bitbucket, Instagram. This package use [Laravel Socialite](https://github.com/laravel/socialite).
+Social OAuth authentication for Laravel 5 which provides oAuth support in PHP 5.3+ and is very easy to integrate with any project which requires an oAuth client. This package use [Laravel Socialite](https://github.com/laravel/socialite). For Laravel 4 look this [package](https://github.com/artdarek/oauth-4-laravel) 
+
+## Supported services
+
+The library supports OAuth 2.0 compliant services. A list of currently implemented services can be found below. More services will be implemented soon.
+
+Included service implementations:
+
+- OAuth2
+    - Facebook
+    - GitHub
+    - Google
+    - Instagram
+    - LinkedIn
+    - Bitbucket
+    - Twitter
+    - Dribbble
+- more to come!
 
 ## Installation
 
