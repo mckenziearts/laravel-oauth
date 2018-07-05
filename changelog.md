@@ -2,6 +2,9 @@
 
 All notable changes to `LaravelOAuth` will be documented in this file.
 
+# Version 1.0.3
+- Add Dribbble provider to socialite support
+
 # Version 1.0.2
 - Add Instagram provider to socialite support
 

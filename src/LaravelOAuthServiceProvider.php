@@ -3,6 +3,7 @@
 namespace Mckenziearts\LaravelOAuth;
 
 use Illuminate\Support\ServiceProvider;
+use Mckenziearts\LaravelOAuth\Providers\DribbbleProvider;
 use Mckenziearts\LaravelOAuth\Providers\InstagramProvider;
 
 class LaravelOAuthServiceProvider extends ServiceProvider
@@ -31,6 +32,7 @@ class LaravelOAuthServiceProvider extends ServiceProvider
 
         // Boot all new OAuth 2 Provider added to Socialite
         $this->bootInstagramSocialite();
+        $this->bootDribbbleSocialite();
     }
 
     /**
@@ -83,6 +85,19 @@ class LaravelOAuthServiceProvider extends ServiceProvider
                 $config = $app['config']['services.instagram'];
 
                 return $socialite->buildProvider(InstagramProvider::class, $config);
+            }
+        );
+    }
+
+    private function bootDribbbleSocialite()
+    {
+        $socialite = $this->app->make(\Laravel\Socialite\Contracts\Factory::class);
+        $socialite->extend(
+            'dribbble',
+            function ($app) use ($socialite) {
+                $config = $app['config']['services.dribbble'];
+
+                return $socialite->buildProvider(DribbbleProvider::class, $config);
             }
         );
     }
