@@ -48,6 +48,7 @@ class DribbbleProvider extends AbstractProvider implements ProviderInterface
         $response = $this->getHttpClient()->get(
             'https://api.dribbble.com/v2/user?access_token='.$token
         );
+
         return json_decode($response->getBody()->getContents(), true);
     }
 
@@ -66,6 +67,5 @@ class DribbbleProvider extends AbstractProvider implements ProviderInterface
             'email' => Arr::get($user, 'email'),
             'avatar' => $user['avatar_url'],
         ]);
-
     }
 }
