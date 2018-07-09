@@ -39,11 +39,7 @@ class PinterestProvider extends AbstractProvider implements ProviderInterface
     {
         $response = $this->getHttpClient()->get(
             'https://api.pinterest.com/v1/me/',
-            [
-                'headers' => [
-                    'Authorization' => 'Bearer '.$token,
-                ],
-            ]
+            ['headers' => ['Authorization' => 'Bearer '.$token]]
         );
         $contents = $response->getBody()->getContents();
 
@@ -57,7 +53,7 @@ class PinterestProvider extends AbstractProvider implements ProviderInterface
     {
         preg_match('#https://www.pinterest.com/(.+?)/#', $user['data']['url'], $matches);
         $nickname = $matches[1];
-        
+
         return (new User())->setRaw($user)->map(
             [
                 'id'       => $user['data']['id'],
@@ -73,10 +69,7 @@ class PinterestProvider extends AbstractProvider implements ProviderInterface
     protected function getTokenFields($code)
     {
         return array_merge(
-            parent::getTokenFields($code),
-            [
-                'grant_type' => 'authorization_code',
-            ]
+            parent::getTokenFields($code), ['grant_type' => 'authorization_code']
         );
     }
 }
