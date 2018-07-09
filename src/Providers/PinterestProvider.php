@@ -46,6 +46,7 @@ class PinterestProvider extends AbstractProvider implements ProviderInterface
             ]
         );
         $contents = $response->getBody()->getContents();
+
         return json_decode($contents, true);
     }
 
@@ -56,6 +57,7 @@ class PinterestProvider extends AbstractProvider implements ProviderInterface
     {
         preg_match('#https://www.pinterest.com/(.+?)/#', $user['data']['url'], $matches);
         $nickname = $matches[1];
+        
         return (new User())->setRaw($user)->map(
             [
                 'id'       => $user['data']['id'],
