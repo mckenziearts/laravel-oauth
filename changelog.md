@@ -2,6 +2,9 @@
 
 All notable changes to `LaravelOAuth` will be documented in this file.
 
+# Version 1.0.4
+- Add Pinterest provider to socialite support
+
 # Version 1.0.3
 - Add Dribbble provider to socialite support
 
