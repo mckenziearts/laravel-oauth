@@ -3,10 +3,10 @@
 namespace Mckenziearts\LaravelOAuth;
 
 use Illuminate\Support\ServiceProvider;
+use Mckenziearts\LaravelOAuth\Providers\YoutubeProvider;
 use Mckenziearts\LaravelOAuth\Providers\DribbbleProvider;
 use Mckenziearts\LaravelOAuth\Providers\InstagramProvider;
 use Mckenziearts\LaravelOAuth\Providers\PinterestProvider;
-use Mckenziearts\LaravelOAuth\Providers\YoutubeProvider;
 
 class LaravelOAuthServiceProvider extends ServiceProvider
 {
