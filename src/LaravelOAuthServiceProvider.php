@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Mckenziearts\LaravelOAuth\Providers\DribbbleProvider;
 use Mckenziearts\LaravelOAuth\Providers\InstagramProvider;
 use Mckenziearts\LaravelOAuth\Providers\PinterestProvider;
+use Mckenziearts\LaravelOAuth\Providers\YoutubeProvider;
 
 class LaravelOAuthServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,7 @@ class LaravelOAuthServiceProvider extends ServiceProvider
         $this->bootInstagramSocialite();
         $this->bootDribbbleSocialite();
         $this->bootPinterestSocialite();
+        $this->bootYoutubeSocialite();
     }
 
     /**
@@ -113,6 +115,19 @@ class LaravelOAuthServiceProvider extends ServiceProvider
                 $config = $app['config']['services.pinterest'];
 
                 return $socialite->buildProvider(PinterestProvider::class, $config);
+            }
+        );
+    }
+
+    private function bootYoutubeSocialite()
+    {
+        $socialite = $this->app->make(\Laravel\Socialite\Contracts\Factory::class);
+        $socialite->extend(
+            'youtube',
+            function ($app) use ($socialite) {
+                $config = $app['config']['services.youtube'];
+
+                return $socialite->buildProvider(YoutubeProvider::class, $config);
             }
         );
     }
