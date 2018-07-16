@@ -26,6 +26,7 @@ Included service implementations:
     - Twitter
     - Dribbble
     - Pinterest
+    - Youtube
 - more to come!
 
 ## Installation
