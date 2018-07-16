@@ -22,7 +22,7 @@ return [
     |
     | Here you can specify the specific provider you need for your application
     | Supported: "facebook", "google", "github", "twitter", "linkedin", "bitbucket"
-    | "instagram", "dribbble
+    | "instagram", "dribbble", "pinterest", "youtube"
     |
     */
 
