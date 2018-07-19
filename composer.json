@@ -1,6 +1,6 @@
 {
   "name": "mckenziearts/laravel-oauth",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Social OAuth authentication for Laravel 5. Drivers: Facebook, Twitter, Google, LinkedIn, Github",
   "type": "laravel-package",
   "license": "MIT",

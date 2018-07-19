@@ -2,6 +2,9 @@
 
 All notable changes to `LaravelOAuth` will be documented in this file.
 
+# Version 1.0.6
+- Add Gitlab provider to socialite support
+
 # Version 1.0.5
 - Add Youtube provider to socialite support
 

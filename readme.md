@@ -27,6 +27,7 @@ Included service implementations:
     - Dribbble
     - Pinterest
     - Youtube
+    - Gitlab
 - more to come!
 
 ## Installation
