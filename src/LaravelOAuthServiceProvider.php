@@ -3,6 +3,7 @@
 namespace Mckenziearts\LaravelOAuth;
 
 use Illuminate\Support\ServiceProvider;
+use Mckenziearts\LaravelOAuth\Providers\GitlabProvider;
 use Mckenziearts\LaravelOAuth\Providers\YoutubeProvider;
 use Mckenziearts\LaravelOAuth\Providers\DribbbleProvider;
 use Mckenziearts\LaravelOAuth\Providers\InstagramProvider;
@@ -37,6 +38,7 @@ class LaravelOAuthServiceProvider extends ServiceProvider
         $this->bootDribbbleSocialite();
         $this->bootPinterestSocialite();
         $this->bootYoutubeSocialite();
+        $this->bootGitlabSocialite();
     }
 
     /**
@@ -128,6 +130,19 @@ class LaravelOAuthServiceProvider extends ServiceProvider
                 $config = $app['config']['services.youtube'];
 
                 return $socialite->buildProvider(YoutubeProvider::class, $config);
+            }
+        );
+    }
+
+    private function bootGitlabSocialite()
+    {
+        $socialite = $this->app->make(\Laravel\Socialite\Contracts\Factory::class);
+        $socialite->extend(
+            'gitlab',
+            function ($app) use ($socialite) {
+                $config = $app['config']['services.gitlab'];
+
+                return $socialite->buildProvider(GitlabProvider::class, $config);
             }
         );
     }
