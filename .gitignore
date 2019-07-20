@@ -7,3 +7,4 @@ composer.lock
 /.vagrant
 npm-debug.log
 yarn-error.log
+/public/assets/yarn.lock
