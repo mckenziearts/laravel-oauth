@@ -71,10 +71,11 @@ trait OAuthSocialite
     public function registerUser($provider, $user)
     {
         $userId = DB::table(config('laravel-oauth.users.table'))->insertGetId([
-            'name'  => $user->getName(),
-            'email' => $user->getEmail(),
+            'name'      => $user->getName(),
+            'email'     => $user->getEmail(),
             'password'  => bcrypt('password'),
-            $provider.'_id'    => $user->getId(),
+            $provider.'_id'     => $user->getId(),
+            'email_verified_at' => Carbon::now(),
             'created_at'    => Carbon::now(),
             'updated_at'    => Carbon::now(),
         ]);
