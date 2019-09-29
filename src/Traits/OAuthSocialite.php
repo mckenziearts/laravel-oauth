@@ -2,7 +2,7 @@
 
 namespace Mckenziearts\LaravelOAuth\Traits;
 
-use Socialite;
+use Laravel\Socialite\Facades\Socialite;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +12,8 @@ trait OAuthSocialite
     /**
      * Redirect the user to the Provider authentication page.
      *
-     * @return \Illuminate\Http\Response
+     * @param $provider
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
     public function redirectToProvider($provider)
     {
@@ -28,6 +29,7 @@ trait OAuthSocialite
     /**
      * Obtain the user information from provider.
      *
+     * @param $provider
      * @return \Illuminate\Http\Response
      */
     public function handleProviderCallback($provider)
