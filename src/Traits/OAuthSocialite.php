@@ -2,10 +2,10 @@
 
 namespace Mckenziearts\LaravelOAuth\Traits;
 
-use Laravel\Socialite\Facades\Socialite;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
 
 trait OAuthSocialite
 {
