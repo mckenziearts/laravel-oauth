@@ -30,6 +30,13 @@ Included service implementations:
     - Gitlab
 - more to come!
 
+Laravel Support version
+
+| **Laravel**  |  **laravel-oauth** |
+|---|---|
+| <=5.5  | ^1.0  |
+| 6.0  | ^1.1  |
+
 ## Installation
 
 1. Include the package in your project using Composer
